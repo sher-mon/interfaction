@@ -1,0 +1,26 @@
+/* Clearfix */
+.clear:before, .clear:after {content: " "; display: table;}
+.clear:after {clear: both;}
+/* Preferred box sizing  */
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+body {position: relative; font-family: "Helvetica Neue"; color: #222328; padding: 20px 0;}
+#container {position: relative; width: 80%; min-width: 420px; max-width: 650px; margin: 10px auto;}
+h1 {font-size: 24px; font-weight: bold; text-align: center;}
+.select-interface-linked {display: none;}
+ul.select-interface {position: relative; width: 100%; margin: 0 auto;}
+ul.select-interface > li {position: absolute; top: 0; background: #fff; border-bottom: 1px solid #ccc; padding: 20px 0; font-size: 26px; text-indent: 10px; cursor: pointer; transition: background-color .3s, color .3s; -webkit-transition: background-color .3s, color .3s; -moz-transition: background-color .3s, color .3s;}
+ul.select-interface > li span.dropdown-arrow {display: block; width: 20px; height: 20px;}
+ul.select-interface > li span.dropdown-arrow img {width: 100%;}
+ul.select-interface > li:first-of-type, ul.select-interface[data-status="closed"] > li.selected {position: relative;}
+ul.select-interface[data-status="closed"] > li.selected {background-color: #eee;}
+ul.select-interface[data-status="closed"] > li[data-value="0"].selected {background-color: #fff;}
+ul.select-interface[data-status="closed"] > li {display: none;}
+ul.select-interface[data-status="open"] > li {display: block !important; border-left: 1px solid #444; border-right: 1px solid #444;}
+ul.select-interface[data-status="open"] > li:first-of-type {border-bottom: 1px solid #444; background-color: #555; color: #fff;} 
+ul.select-interface[data-status="open"] > li:last-of-type {border-bottom: 1px solid #000;}
+ul.select-interface > li:hover {background-color: #eee;}
+ul.select-interface[data-status="closed"] > li[data-value="0"]:hover {background-color: #fff;}
+ul.select-interface > li.selected {display: block;}
+ul.select-interface > li span.dropdown-arrow {position: absolute; top: 20px; right: 40px; transition: .4s; -webkit-transition: .4s; -moz-transition: .4s;}
+ul.select-interface[data-status="open"] > li span.dropdown-arrow {transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg);}
